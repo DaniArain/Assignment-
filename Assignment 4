@@ -1,0 +1,168 @@
+Problem 1
+Accept a list from user and print alternate elements.
+
+
+
+def alternate_elements(lst):
+    return lst[::2]
+
+# Example usage:
+user_list = [1, 2, 3, 4, 5, 6, 7]
+print("Alternate elements:", alternate_elements(user_list))
+
+     
+Problem 2
+Reverse a list without using reverse().
+
+
+
+def reverse_list(lst):
+    return lst[::-1]
+
+# Example usage:
+user_list = [10, 20, 30, 40, 50]
+print("Reversed list:", reverse_list(user_list))
+
+     
+Problem 3
+Find the largest number in a list without using max().
+
+
+
+def find_largest(lst):
+    largest = lst[0]
+    for num in lst:
+        if num > largest:
+            largest = num
+    return largest
+
+# Example usage:
+user_list = [12, 45, 23, 89, 34]
+print("Largest number:", find_largest(user_list))
+
+     
+Problem 4
+Rotate list elements.
+
+
+
+def rotate_list(lst):
+    if not lst:
+        return lst
+    return [lst[-1]] + lst[:-1]
+
+# Example usage:
+user_list = [1, 2, 3, 4, 5]
+print("Rotated list:", rotate_list(user_list))
+
+     
+Problem 5
+Delete a given word from a string.
+
+
+
+def delete_word(sentence, word):
+    words = sentence.split()
+    new_sentence = " ".join(w for w in words if w != word)
+    return new_sentence
+
+# Example usage:
+sentence = "Python is a powerful programming language"
+word = "powerful"
+print("New string:", delete_word(sentence, word))
+
+     
+Problem 6
+Convert mm/dd/yyyy to 'Month dd, yyyy'.
+
+
+
+import calendar
+
+def convert_date(date_str):
+    mm, dd, yyyy = date_str.split("/")
+    month = calendar.month_name[int(mm)]
+    return f"{month} {int(dd)}, {yyyy}"
+
+# Example usage:
+date_input = "03/12/2021"
+print("Formatted date:", convert_date(date_input))
+
+     
+Problem 7
+Capitalize each word of a string.
+
+
+
+def capitalize_words(s):
+    result = ""
+    capitalize_next = True
+    for char in s:
+        if capitalize_next and char.isalpha():
+            result += char.upper()
+            capitalize_next = False
+        else:
+            result += char.lower()
+        if char == " ":
+            capitalize_next = True
+    return result
+
+# Example usage:
+sentence = "stop and smell the roses."
+print("Capitalized:", capitalize_words(sentence))
+
+     
+Problem 8
+Find sum of each row in a matrix.
+
+
+
+def row_sums(matrix):
+    for i, row in enumerate(matrix, start=1):
+        print(f"Sum of row {i} =", sum(row))
+
+# Example usage:
+matrix = [
+    [10, 11, 11],
+    [12, 9, 10],
+    [21, 21, 21]
+]
+row_sums(matrix)
+
+     
+Problem 9
+Add two matrices.
+
+
+
+def add_matrices(a, b):
+    result = [[a[i][j] + b[i][j] for j in range(len(a[0]))] for i in range(len(a))]
+    return result
+
+# Example usage:
+A = [[1, 2], [3, 4]]
+B = [[5, 6], [7, 8]]
+print("Matrix Addition:")
+for row in add_matrices(A, B):
+    print(row)
+
+     
+Problem 10
+Multiply two matrices.
+
+
+
+def multiply_matrices(a, b):
+    result = [[0 for _ in range(len(b[0]))] for _ in range(len(a))]
+    for i in range(len(a)):
+        for j in range(len(b[0])):
+            for k in range(len(b)):
+                result[i][j] += a[i][k] * b[k][j]
+    return result
+
+# Example usage:
+A = [[1, 2], [3, 4]]
+B = [[5, 6], [7, 8]]
+print("Matrix Multiplication:")
+for row in multiply_matrices(A, B):
+    print(row)
