@@ -1,0 +1,146 @@
+Problem 1
+Write a program that accepts a string from user and counts the number of vowels.
+
+
+
+def count_vowels(s):
+    vowels = "aeiouAEIOU"
+    count = sum(1 for char in s if char in vowels)
+    return count
+
+# Example usage:
+user_input = "Hello World"
+print("Number of vowels:", count_vowels(user_input))
+
+     
+Problem 2
+Write a program that displays the number of uppercase, lowercase, digits, and whitespaces.
+
+
+
+def analyze_string(s):
+    upper = sum(1 for char in s if char.isupper())
+    lower = sum(1 for char in s if char.islower())
+    digits = sum(1 for char in s if char.isdigit())
+    spaces = sum(1 for char in s if char.isspace())
+    return upper, lower, digits, spaces
+
+# Example usage:
+user_input = "Hello World 123"
+upper, lower, digits, spaces = analyze_string(user_input)
+print("Uppercase:", upper)
+print("Lowercase:", lower)
+print("Digits:", digits)
+print("Whitespaces:", spaces)
+
+     
+Problem 3
+Exchange first and last characters of a string.
+
+
+
+def exchange_first_last(s):
+    if len(s) <= 1:
+        return s
+    return s[-1] + s[1:-1] + s[0]
+
+# Example usage:
+user_input = "HELLO"
+print("New string:", exchange_first_last(user_input))
+
+     
+Problem 4
+Reverse a string.
+
+
+
+def reverse_string(s):
+    return s[::-1]
+
+# Example usage:
+user_input = "EXAM"
+print("Reversed string:", reverse_string(user_input))
+
+     
+Problem 5
+Shift string left by one position.
+
+
+
+def shift_left(s):
+    if len(s) <= 1:
+        return s
+    return s[1:] + s[0]
+
+# Example usage:
+user_input = "examination 2021"
+print("Shifted string:", shift_left(user_input))
+
+     
+Problem 6
+Print initials without using split().
+
+
+
+def print_initials(name):
+    initials = ""
+    if name:
+        initials += name[0].upper() + ". "
+    for i in range(1, len(name)):
+        if name[i-1] == " " and name[i] != " ":
+            initials += name[i].upper() + ". "
+    return initials.strip()
+
+# Example usage:
+user_input = "Ajay Kumar Garg"
+print("Initials:", print_initials(user_input))
+
+     
+Problem 7
+Check if a string is a palindrome.
+
+
+
+def is_palindrome(s):
+    return s == s[::-1]
+
+# Example usage:
+user_input = "madam"
+print("Is palindrome:", is_palindrome(user_input))
+
+     
+Problem 8
+Display the given shifting pattern.
+
+
+
+def display_shift_pattern(word):
+    for i in range(len(word)):
+        shifted = word[i:] + word[:i]
+        print(shifted)
+
+# Example usage:
+display_shift_pattern("SHIFT")
+
+     
+Problem 9
+Password validation.
+
+
+
+def validate_password(pwd):
+    if len(pwd) < 8:
+        return False
+    if not any(char.isupper() for char in pwd):
+        return False
+    if not any(char.islower() for char in pwd):
+        return False
+    if not any(char.isdigit() for char in pwd):
+        return False
+    return True
+
+# Example usage:
+user_password = "Test2021"
+print("Is valid password:", validate_password(user_password))
+
+     
