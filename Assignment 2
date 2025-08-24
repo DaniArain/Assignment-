@@ -1,0 +1,155 @@
+Assignment 02 (Conditional Statements) — Complete Solutions
+This notebook contains Python solutions to all problems from Assignment 02.
+
+Each problem includes explanation and code implementation.
+
+1) Check if a number is positive, negative, or zero
+
+# Takes a number as input and checks whether it's positive, negative, or zero
+try:
+    num = float(input("Enter a number: "))
+    if num > 0:
+        print("The number is positive.")
+    elif num < 0:
+        print("The number is negative.")
+    else:
+        print("The number is zero.")
+except ValueError:
+    print("Invalid input! Please enter a number.")
+     
+2) Check if a number is even or odd
+
+# Takes an integer as input and checks whether it's even or odd
+try:
+    num = int(input("Enter an integer: "))
+    if num % 2 == 0:
+        print("The number is even.")
+    else:
+        print("The number is odd.")
+except ValueError:
+    print("Invalid input! Please enter an integer.")
+     
+3) Find the largest of two numbers
+
+# Takes two numbers and finds the larger one
+try:
+    a = float(input("Enter first number: "))
+    b = float(input("Enter second number: "))
+    if a > b:
+        print(f"The largest number is {a}")
+    elif b > a:
+        print(f"The largest number is {b}")
+    else:
+        print("Both numbers are equal.")
+except ValueError:
+    print("Invalid input! Please enter valid numbers.")
+     
+4) Find the largest of three numbers
+
+# Takes three numbers and finds the largest
+try:
+    a = float(input("Enter first number: "))
+    b = float(input("Enter second number: "))
+    c = float(input("Enter third number: "))
+    if a >= b and a >= c:
+        print(f"The largest number is {a}")
+    elif b >= a and b >= c:
+        print(f"The largest number is {b}")
+    else:
+        print(f"The largest number is {c}")
+except ValueError:
+    print("Invalid input! Please enter valid numbers.")
+     
+5) Check if a year is a leap year
+
+# Takes a year and checks whether it's a leap year
+try:
+    year = int(input("Enter a year: "))
+    if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
+        print(f"{year} is a leap year.")
+    else:
+        print(f"{year} is not a leap year.")
+except ValueError:
+    print("Invalid input! Please enter a valid year.")
+     
+6) Display grade based on marks
+
+# Takes marks and displays grade according to conditions
+try:
+    marks = float(input("Enter marks (0-100): "))
+    if marks >= 90:
+        print("Grade: A")
+    elif marks >= 80:
+        print("Grade: B")
+    elif marks >= 70:
+        print("Grade: C")
+    elif marks >= 60:
+        print("Grade: D")
+    else:
+        print("Grade: F")
+except ValueError:
+    print("Invalid input! Please enter valid marks.")
+     
+7) Simple Calculator (+, -, *, /)
+
+# Performs basic arithmetic operations based on user choice
+try:
+    a = float(input("Enter first number: "))
+    b = float(input("Enter second number: "))
+    op = input("Enter operation (+, -, *, /): ")
+    
+    if op == '+':
+        print(f"Result: {a + b}")
+    elif op == '-':
+        print(f"Result: {a - b}")
+    elif op == '*':
+        print(f"Result: {a * b}")
+    elif op == '/':
+        if b != 0:
+            print(f"Result: {a / b}")
+        else:
+            print("Error: Division by zero")
+    else:
+        print("Invalid operation")
+except ValueError:
+    print("Invalid input! Please enter numbers.")
+     
+8) Check if a character is vowel or consonant
+
+# Takes a character and checks if it's a vowel or consonant
+ch = input("Enter a single alphabet character: ").lower()
+if len(ch) == 1 and ch.isalpha():
+    if ch in 'aeiou':
+        print(f"{ch} is a vowel.")
+    else:
+        print(f"{ch} is a consonant.")
+else:
+    print("Invalid input! Please enter a single alphabet character.")
+     
+9) Find the absolute value of a number
+
+# Computes absolute value without using abs()
+try:
+    num = float(input("Enter a number: "))
+    if num < 0:
+        print(f"Absolute value: {-num}")
+    else:
+        print(f"Absolute value: {num}")
+except ValueError:
+    print("Invalid input! Please enter a number.")
+     
+10) Calculate electricity bill
+
+# Bill calculation based on units consumed
+try:
+    units = float(input("Enter number of units consumed: "))
+    if units <= 100:
+        bill = units * 5
+    elif units <= 200:
+        bill = 100*5 + (units-100)*7
+    else:
+        bill = 100*5 + 100*7 + (units-200)*10
+    print(f"Electricity Bill: Rs. {bill}")
+except ValueError:
+    print("Invalid input! Please enter valid units.")
+     
