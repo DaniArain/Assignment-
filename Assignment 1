@@ -1,9 +1,9 @@
 Part -1 Python Basics (Variables)
-1.	Print Your Name with your Father name and Date of birth using suitable escape sequence charactor
+Print Your Name with your Father name and Date of birth using suitable escape sequence charactor
 # Q1: Print Your Name with your Father name and Date of birth using escape sequences
 print("Name:\tNitesh\nFather's Name:\tDileep\nDate of Birth:\t09/10/2005")
 # Write your code here
-2.	Write your small bio using variables and print it using print function
+Write your small bio using variables and print it using print function
 # Q2: Write your small bio using variables and print it
 name = "Nitesh"
 father_name = "Dileep"
@@ -13,7 +13,7 @@ city = "Lucknow"
 
 print(f"My name is {name}, son of {father_name}. I was born on {dob}. I enjoy {hobby} and I live in {city}.")
 # Write your code here
-3.	Write a program in which use all the operators we can use in Python
+Write a program in which use all the operators we can use in Python
 # Q3: Use all operators in Python
 a, b = 10, 3
 
@@ -55,10 +55,10 @@ print("Bitwise NOT:", ~a)
 print("Bitwise Shift Left:", a << 1)
 print("Bitwise Shift Right:", a >> 1)
 # Write your code here
-4.	Completes the following steps of small task:
-•	Mention Marks of English , Islamiat and Maths out of 100 in 3 different variables
-•	Mention Variable of Total Marks and assign 300 to it
-•	Calculate Percentage
+Completes the following steps of small task:
+Mention Marks of English , Islamiat and Maths out of 100 in 3 different variables
+Mention Variable of Total Marks and assign 300 to it
+Calculate Percentage
 # Q4: Marks and Percentage Calculation
 english = 85
 islamiat = 90
@@ -72,7 +72,7 @@ print("Obtained Marks:", obtained_marks)
 print("Percentage:", percentage, "%")
 # Write your code here
 Part -2 Python Basics (Conditional Statements)
-1.	A company decided to give bonus of 5% to employee if his/her year of service is more than 5 years. Ask user for their salary and year of service and print the net bonus amount.
+A company decided to give bonus of 5% to employee if his/her year of service is more than 5 years. Ask user for their salary and year of service and print the net bonus amount.
 # Part 2 - Q1: Bonus Calculation
 salary = float(input("Enter your salary: "))
 years = int(input("Enter years of service: "))
@@ -83,7 +83,7 @@ if years > 5:
 else:
     print("No bonus")
 #Type your code here
-2.	Write a program to check whether a person is eligible for voting or not. (accept age from user) if age is greater than 17 eligible otherwise not eligible
+Write a program to check whether a person is eligible for voting or not. (accept age from user) if age is greater than 17 eligible otherwise not eligible
 # Part 2 - Q2: Voting Eligibility
 age = int(input("Enter your age: "))
 if age >= 18:
@@ -91,7 +91,7 @@ if age >= 18:
 else:
     print("Not eligible for voting")
 #Type your code here
-3.	Write a program to check whether a number entered by user is even or odd.
+Write a program to check whether a number entered by user is even or odd.
 # Part 2 - Q3: Even or Odd
 num = int(input("Enter a number: "))
 if num % 2 == 0:
@@ -99,7 +99,7 @@ if num % 2 == 0:
 else:
     print("Odd number")
 #Type your code here
-4.	Write a program to check whether a number is divisible by 7 or not. Show Answer
+Write a program to check whether a number is divisible by 7 or not. Show Answer
 # Part 2 - Q4: Divisible by 7
 num = int(input("Enter a number: "))
 if num % 7 == 0:
@@ -107,46 +107,64 @@ if num % 7 == 0:
 else:
     print("Number is not divisible by 7")
 #Type your code here
-5.	Write a program to display "Hello" if a number entered by user is a multiple of five , otherwise print "Bye".
+Write a program to display "Hello" if a number entered by user is a multiple of five , otherwise print "Bye".
 #Type your code here
-7.	Write a program to display the last digit of a number.
+Write a program to display the last digit of a number.
 #Type your code here
-9.	Take values of length and breadth of a rectangle from user and print if it is square or rectangle.
+Take values of length and breadth of a rectangle from user and print if it is square or rectangle.
 #Type your code here 
-10.	Take two int values from user and print greatest among them.
+Take two int values from user and print greatest among them.
 # Type your code here
-11.	A shop will give discount of 10% if the cost of purchased quantity is more than 1000. Ask user for quantity Suppose, one unit will cost 100. Judge and print total cost for user.
+A shop will give discount of 10% if the cost of purchased quantity is more than 1000. Ask user for quantity Suppose, one unit will cost 100. Judge and print total cost for user.
 #Type your code here
-12.	A school has following rules for grading system:
+A school has following rules for grading system:
 a. Below 25 - F
+
 b. 25 to 45 - E
+
 c. 45 to 50 - D
+
 d. 50 to 60 - C
+
 e. 60 to 80 - B
+
 f. Above 80 - A
+
 Ask user to enter marks and print the corresponding grade.
+
 #Type your code here
 14)A student will not be allowed to sit in exam if his/her attendence is less than 75%.
-Take following input from user
-•	Number of classes held
-•	Number of classes attended.
-And print
-•	percentage of class attended
-•	Is student is allowed to sit in exam or not.
-#Type your code here
-15.	Modify the above question to allow student to sit if he/she has medical cause. Ask user if he/she has medical cause or not ( 'Y' or 'N' ) and print accordingly.
-#Type your code here
-16.	Write a program to check if a year is leap year or not.
-If a year is divisible by 4 then it is leap year but if the year is century year like 2000, 1900, 2100 then it must be divisible by 400.
-#Type your code here
-17.	Ask user to enter age, gender ( M or F ), marital status ( Y or N ) and then using following rules print their place of service.
-if employee is female, then she will work only in urban areas.
-if employee is a male and age is in between 20 to 40 then he may work in anywhere
-if employee is male and age is in between 40 t0 60 then he will work in urban areas only.
-And any other input of age should print "ERROR"
-#Type your code here
-6.	Write a program to calculate the electricity bill (accept number of unit from user) according to the following criteria : Unit Price
-uptp 100 units no charge Next 200 units Rs 5 per unit After 200 units Rs 10 per unit (For example if input unit is 350 than total bill amount is Rs.3500 (For example if input unit is 97 than total bill amount is Rs.0 (For example if input unit is 150 than total bill amount is Rs.750
-13.	Take input of age of 3 people by user and determine oldest and youngest among them.
-#Type your code here
 
+Take following input from user
+
+Number of classes held
+
+Number of classes attended.
+
+And print
+
+percentage of class attended
+
+Is student is allowed to sit in exam or not.
+
+#Type your code here
+Modify the above question to allow student to sit if he/she has medical cause. Ask user if he/she has medical cause or not ( 'Y' or 'N' ) and print accordingly.
+#Type your code here
+Write a program to check if a year is leap year or not.
+If a year is divisible by 4 then it is leap year but if the year is century year like 2000, 1900, 2100 then it must be divisible by 400.
+
+#Type your code here
+Ask user to enter age, gender ( M or F ), marital status ( Y or N ) and then using following rules print their place of service.
+if employee is female, then she will work only in urban areas.
+
+if employee is a male and age is in between 20 to 40 then he may work in anywhere
+
+if employee is male and age is in between 40 t0 60 then he will work in urban areas only.
+
+And any other input of age should print "ERROR"
+
+#Type your code here
+Write a program to calculate the electricity bill (accept number of unit from user) according to the following criteria : Unit Price
+uptp 100 units no charge Next 200 units Rs 5 per unit After 200 units Rs 10 per unit (For example if input unit is 350 than total bill amount is Rs.3500 (For example if input unit is 97 than total bill amount is Rs.0 (For example if input unit is 150 than total bill amount is Rs.750
+Take input of age of 3 people by user and determine oldest and youngest among them.
+#Type your code here
