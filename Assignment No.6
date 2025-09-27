@@ -1,0 +1,60 @@
+1 Write a python program to create a class representing a circle . include method to calculate its
+area and perameter
+Code:
+import math
+class Circle:
+def __init__(self, radius):
+self.radius = radius
+def area(self):
+return math.pi * self.radius ** 2
+def perimeter(self):
+return 2 * math.pi * self.radius
+radius= float(input("Enter the radius of the circle: "))
+c = Circle(radius)
+print(f"\nCircle with radius {c.radius}")
+print("-----------X--------------------")
+print(f"Area : {c.area()}")
+print(f"Perimeter : {c.perimeter()}")
+2 - write a python program to create a person class . include attributes like name country and date
+of birth . implement a method to determine the persons age
+Code:
+from datetime import date
+class Person:
+def __init__(self, name, country, year, month, day):
+self.name = name
+self.country = country
+self.dob = date(year, month, day)
+def age(self):
+today = date.today()
+return today.year - self.dob.year - ((today.month, today.day) < (self.dob.month, self.dob.day))
+name = input("Enter name: ")
+country = input("Enter country: ")
+y, m, d = map(int, input("Enter DOB (YYYY MM DD): ").split())
+p = Person(name, country, y, m, d)
+print(f"\nName: {p.name}")
+print(f"Country: {p.country}")
+print(f"Age: {p.age()} years")
+3 write a python program to create a calculator class . include methods for basic arithemic
+operations
+Code:
+class Calculator:
+def add(self, a, b):
+return a + b
+def subtract(self, a, b):
+return a - b
+def multiply(self, a, b):
+return a * b
+def divide(self, a, b):
+if b != 0:
+return a / b
+else:
+return "Error! Division by zero."
+calc = Calculator()
+x = float(input("Enter first number: "))
+y = float(input("Enter second number: "))
+print("\nResults:")
+print(f"{x} + {y} = {calc.add(x, y)}")
+print(f"{x} - {y} = {calc.subtract(x, y)}")
+print(f"{x} * {y} = {calc.multiply(x, y)}")
+print(f"{x} / {y} = {calc.divide(x, y)}")
+Code:
